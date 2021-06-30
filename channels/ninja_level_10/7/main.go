@@ -6,8 +6,13 @@ func main() {
 	c := createChannels()
 
 	for k := 0; k < 100; k++ {
-		fmt.Println(<-c)
+		v, ok := <-c
+		fmt.Println(v, ok)
 	}
+
+	close(c)
+	v, ok := <-c
+	fmt.Println(v, ok)
 }
 
 // createChannels makes 10 new channels

@@ -26,7 +26,7 @@ func gen(q chan<- int) <-chan int {
 	return c
 }
 
-func receive(c <-chan int, q chan int) {
+func receive(c, q <-chan int) {
 	for {
 		select {
 		case v := <-c:

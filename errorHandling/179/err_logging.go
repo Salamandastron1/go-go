@@ -15,7 +15,9 @@ func main() {
 		// log prints date timestamp
 		// log.Println("err happened", err)
 		// fatal calls os.Exit(1) when called
-		log.Fatal(err)
+		// log.Fatal(err)
+		// log.Panic() logs then calls builtin func panic()
+		log.Panic(err)
 	}
 }
 

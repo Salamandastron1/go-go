@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"log"
+	// "log"
 	"os"
 )
 
@@ -17,7 +17,9 @@ func main() {
 		// fatal calls os.Exit(1) when called
 		// log.Fatal(err)
 		// log.Panic() logs then calls builtin func panic()
-		log.Panic(err)
+		// log.Panic(err)
+		// panic stops goroutine execution
+		panic(err)
 	}
 }
 

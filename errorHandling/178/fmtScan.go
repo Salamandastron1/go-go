@@ -6,6 +6,9 @@ func main() {
 	var answer1, answer2, answer3 string
 
 	fmt.Print("Name: ")
+	//fmt.scan() opens up the terminal
+	// allows for user interaction without BASH
+	// omg omg omg omg
 	_, err := fmt.Scan(&answer1)
 	if err != nil {
 		panic(err)

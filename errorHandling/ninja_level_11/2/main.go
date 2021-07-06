@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 )
 
 type person struct {
@@ -20,9 +21,8 @@ func main() {
 
 	bs, err := toJSON(p1)
 	if err != nil {
-		fmt.Errorf("JSON unmarshal, error %v", err)
+		log.Fatal(err)
 	}
-
 	fmt.Println(string(bs))
 
 }
@@ -30,6 +30,9 @@ func main() {
 // toJSON needs to return an error also
 func toJSON(a interface{}) ([]byte, error) {
 	bs, err := json.Marshal(a)
+	if err != nil {
+		return []byte{}, fmt.Errorf("error in to JSON: %v", err)
+	}
 
-	return bs, err
+	return bs, nil
 }

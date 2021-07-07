@@ -15,6 +15,6 @@ func main() {
 	foo(cErr)
 }
 
-func foo(c customErr) {
+func foo(c error) {
 	fmt.Println(c)
 }

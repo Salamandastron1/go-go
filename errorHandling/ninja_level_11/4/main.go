@@ -24,7 +24,8 @@ func main() {
 
 func sqrt(f float64) (float64, error) {
 	if f < 0 {
-		// write your error code here
+		// can also use errors.New() to generate a message
+		// of type error
 		msg := fmt.Errorf("negative numbers do not have a square root: %v", f)
 		return 0, sqrtError{"40", "20", msg}
 	}

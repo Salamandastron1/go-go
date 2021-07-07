@@ -9,6 +9,6 @@ func TestSimple(t *testing.T) {
 	actual := returnOne()
 
 	if actual != expected {
-		t.Error("Not the actual not equaling the expected")
+		t.Errorf("Not the actual: %v not equaling the expected: %v", actual, expected)
 	}
 }

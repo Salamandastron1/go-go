@@ -5,6 +5,15 @@ import (
 	"gogo/documentation/ninja_level_12/dog"
 )
 
+type canine struct {
+	name string
+	age  int
+}
+
 func main() {
-	fmt.Println(dog.Years(2))
+	doge := canine{
+		"beefer",
+		dog.Years(11),
+	}
+	fmt.Println(doge)
 }

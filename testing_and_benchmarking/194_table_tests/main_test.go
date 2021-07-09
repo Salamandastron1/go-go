@@ -9,14 +9,15 @@ func TestMySum(t *testing.T) {
 	}
 	cases := []test{
 		{[]int{1, 2, 3, 4, 5}, 15},
-		{[]int{5, 5, 5}, 15	},
+		{[]int{5, 5, 5}, 15},
 		{[]int{1, 1, 1, 1, 1}, 5},
 	}
 
 	for _, v := range cases {
-		actual := mySum(v.data...)
-		if v.expected != actual {
-			t.Errorf("Expected: %v Got: %v", v.expected, actual)
+		got := mySum(v.data...)
+		if v.expected != got {
+			t.Errorf("Expected: %v Got: %v", v.expected, got)
+			got
 		}
 	}
 }

@@ -17,7 +17,6 @@ func TestMySum(t *testing.T) {
 		got := mySum(v.data...)
 		if v.expected != got {
 			t.Errorf("Expected: %v Got: %v", v.expected, got)
-			got
 		}
 	}
 }

@@ -4,15 +4,12 @@ import "strings"
 
 // Cat prints out a string
 func Cat(xs []string) string {
-	newStr := ""
-	for i, v := range xs {
-		newStr += v
-		if i == len(xs)-1 {
-			return newStr
-		}
-		newStr += " "
+	s := xs[0]
+	for _, v := range xs[1:] {
+		s += " "
+		s += v
 	}
-	return newStr
+	return s
 }
 
 // Join joins a array of strings together based on delimeter

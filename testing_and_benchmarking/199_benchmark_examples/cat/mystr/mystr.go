@@ -5,8 +5,11 @@ import "strings"
 // Cat prints out a string
 func Cat(xs []string) string {
 	newStr := ""
-	for _, v := range xs {
+	for i, v := range xs {
 		newStr += v
+		if i == len(xs)-1 {
+			return newStr
+		}
 		newStr += " "
 	}
 	return newStr

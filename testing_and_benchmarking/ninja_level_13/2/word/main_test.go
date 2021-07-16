@@ -2,6 +2,7 @@ package word
 
 import (
 	"fmt"
+	"gogo/testing_and_benchmarking/ninja_level_13/2/quote"
 	"testing"
 )
 
@@ -24,15 +25,13 @@ func TestCount(t *testing.T) {
 	}
 }
 func BenchmarkCount(b *testing.B) {
-	longString := "Wow wow, look meow"
 	for i := 0; i < b.N; i++ {
-		Count(longString)
+		Count(quote.SunAlso)
 	}
 }
 func BenchmarkUseCount(b *testing.B) {
-	longString := "Wow wow, look meow"
 	for i := 0; i < b.N; i++ {
-		UseCount(longString)
+		UseCount(quote.SunAlso)
 	}
 }
 func ExampleCount() {
